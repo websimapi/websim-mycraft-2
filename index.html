@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mycraft</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/",
+                "simplex-noise": "https://cdn.jsdelivr.net/npm/simplex-noise@4.0.1/dist/esm/simplex-noise.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <div id="ui">
+            <div id="crosshair">+</div>
+            <div id="hotbar"></div>
+            <div id="health-bar" class="status-bar">
+                <div class="bar-fill"></div>
+            </div>
+            <div id="hunger-bar" class="status-bar">
+                <div class="bar-fill"></div>
+            </div>
+            
+            <div id="inventory-screen" class="game-screen">
+                <div id="inventory-grid" class="grid"></div>
+                <div id="crafting-grid" class="grid"></div>
+                <div id="crafting-result"></div>
+                <button id="close-inventory">Close</button>
+            </div>
+            
+            <div id="game-menu" class="game-screen">
+                <h1>Mycraft</h1>
+                <button id="start-creative">Creative Mode</button>
+                <button id="start-survival">Survival Mode</button>
+                <button id="resume-game">Resume Game</button>
+            </div>
+        </div>
+        
+        <div id="debug-info">
+            <div id="fps">FPS: 60</div>
+            <div id="position">Position: (0, 0, 0)</div>
+            <div id="chunk">Chunk: (0, 0)</div>
+        </div>
+    </div>
+    
+    <script type="module" src="scripts/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
